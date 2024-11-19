@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        let responseIndex = 0;
+        const responses = [
+          {
+             text: "Ithu niybagam iruku namaku theriyama edutha oru pic un fav nu solitey irupa ",
+            image: "https://sanjay434343.github.io/sara/7th.jpg"
+          },
+          {
+           text: "Chello niybagam iruka ithu December 11 2023 9:53 AM un assai namaloda correct first snap eduthoma first eduth pic aprm ethutha un favorite nu soluva ethu tha nama first pic aprm nama ethana photo eduthom nu kanuku illa ipo varaikum laa.",
+            image: "https://sanjay434343.github.io/sara/13.jpg"
+          },
+          {
+            text: "JANUARY 16 2024 uun birth day na december la irthu plan panna theryuma enna vangalam enna panalam nu onnum thonala aprm unna romba surprice paduthanum nu tha athu la vangu ne atha use pannuva illa memory ya vechupa nu nabura nanu kandipa vechupa i know.",
+            image: "https://sanjay434343.github.io/sara/bday.jpg"
+          },
+          {
+            text: "Ithu the na unna first edutha snap unaku threyuma theriyatha nu theriyala first first edutha snap ithutha    ",
+            image: "img/1.jpg"
+          },
+          {
+            text: "Ithu niyabagam irukaa ithu the ne first first share panna periya conversation aprm image um",
+            image: "img/2.jpg"
+          },
+          {
+            text: "Ithu na marakavey maata ne first first na panra oru visiyatha correct panna yabba evlo time edit panna threyuma.",
+            image: "img/3.jpg"
+          },
+          {
+            text: "Ithu the ne en mobil kai la vaaagi edutha first photo threyuma unaku alagu d nee",
+            image: "img/4.jpg"
+          },
+          {
+            text: "Ithu tha neyum nanum edutha 2nd photo canteen la ithula neraya photos iruku ithu nalla iruku",
+            image: "img/5.jpg"
+          },
+          {
+            text: "Ithu tha special uhh first college function aprm ne first saree la vantha aniku edutha photo tha ithu",
+            image: "img/6.jpg"
+          },
+          {
+            text: "ithu iruku paru ithu tha ultimate entha nai paatha vela nu enaku ino theriyala d ",
+            image: "img/7.jpg"
+          },
+          {
+            text: "Ithu the enoda fav pic ana ithu unaku pudikathu ana enaku romba romba pudikumd ana unaku en pudikala nu theriyala",
+            image: "img/16.jpg"
+          },
+          {
+            text: "ithu tha unoda heroine pic uhh na eduthu kudutha aniku tha nama omba jolly ah iruthom OD kuduthutu joly ah round aduchutu vaagi saputu sema jolly la ",
+            image: "img/8.jpg"
+          },
+          {
+            text: "ithu iruku paru na ithula kevelama sirikira ana ithu unoda fav uhh epdithanoo",
+            image: "img/9.jpg"
+          },
+          {
+            text: "ithu tha ne matching matching ahh potutu vara solli edutha photo aniku camera konjam makkaru.",
+            image: "img/10.jpg"
+          },
+          {
+            text: "ithu oru unique photo nu sollalam intha mari photovum illa ini irukuma nu theriyala ana ithu oru vibe ana photo",
+            image: "img/11.jpg"
+          },
+          {
+            text: "Ithu nama 2nd sem apo eduthom cls la ithu oru cute photo en fav kooda sonathu illa ana ipo solra therenjuko.",
+            image: "img/12.jpg"
+          },
+          {
+            text: "Athey nal eduthathu tha ana ithu tha unoda fav photo",
+            image: "img/13.jpg"
+          },
+          {
+            text: "ithu ena fav fav photo aniku sanda tha aniku solla mudiyala antha  saree ku netha alagu sekura mari iruka d chello ana sorry aniku na apdi iruthuruka koodathu",
+            image: "img/14.jpg"
+          },
+          {
+            text: "ithu tha romba romba nal kaluchu edutha photo nama rendu peru mattum ana aniku sandai paru un moonji vaadi pooi iruku really sorry",
+            image: "img/15.jpg"
+          },
+          {
+            text: "Seri intha message ne pakura na ithu mattum nama edutha photo oda count ithulaye the rendu munu photo vera vera mari nama photo eduthu romba nal achu threyuma unku nama atha kavanikavey illa d chello.Athu vara intha first photo nenachu paru love you d chellamey❣️",
+            image: "https://sanjay434343.github.io/sara/7th.jpg"
+          },
+         
+          {
+            text: "Ithu nama aliyira vara thodagum",
+            image: "https://imgs.search.brave.com/ogJ9jOhEl8Cl3KpwnyiC6hvma7NYm7oiqWQbajtmwjo/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNjI3/NzQ3MzY4L3Bob3Rv/L3N5bWJvbC1vZi1p/bmZpbml0eS13aXRo/LWhhbmRzLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1PNld5/TmpSVEptcW05LWVO/SmpJRXVhejBueE9t/ZFFjMEl4X0hDaDlL/dVZJPQ"
+          },
+        ];
+        
+        function checkMessage() {
+          const input = document.getElementById('messageInput').value;
+      
+          if (input === 'mm mm aprm') {
+            const chatArea = document.getElementById('chatArea');
+      
+            const newMessage = document.createElement('div');
+            newMessage.className = 'flex justify-end mb-4';
+            newMessage.innerHTML = `
+              <div class="text-white p-3 rounded-lg max-w-xs send">
+                <div>mm mm aprm</div>
+                <div class="text-right text-xs text-gray-400">5:06 PM</div>
+              </div>
+            `;
+            chatArea.appendChild(newMessage);
+      
+            chatArea.scrollTop = chatArea.scrollHeight;
+      
+            setTimeout(() => {
+              const response = responses[responseIndex];
+      
+              const messageResponse = document.createElement('div');
+              messageResponse.className = 'flex flex-col justify-start mb-4';
+              messageResponse.innerHTML = `
+                <div class="flex justify-start">
+                  <div class="text-white p-3 rounded-lg max-w-xs res">
+                    <img src="${response.image}" alt="Response Image" class="w-full rounded-lg mb-2"/>
+                    <div>${response.text}</div>
+                    <div class="text-right text-xs text-gray-400">5:07 PM</div>
+                  </div>
+                </div>
+              `;
+              chatArea.appendChild(messageResponse);
+      
+              responseIndex = (responseIndex + 1) % responses.length;
+      
+              chatArea.scrollTop = chatArea.scrollHeight;
+            }, 1000);
+      
+            document.getElementById('messageInput').value = 'mm mm aprm';
+          }
+        }
+  
+        function initMessage() {
+          const chatArea = document.getElementById('chatArea');
+          const initialMessage = "Send button click pannu continue va enjoy pannu";
+          
+          const message = document.createElement('div');
+          message.className = 'flex justify-start mb-4';
+          message.innerHTML = `
+            <div class="text-white p-3 rounded-lg max-w-xs res">
+              <div>${initialMessage}</div>
+              <div class="text-right text-xs text-gray-400">5:05 PM</div>
+            </div>
+          `;
+          chatArea.appendChild(message);
+          chatArea.scrollTop = chatArea.scrollHeight;
+        }
+  
+        window.onload = initMessage;
+      </script>
+  
+    <style>
+      body {
+        background-image: url('https://github.com/sara112023/whatsapp-story/blob/main/bg.jpg?raw=true');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; /* Ensure the image stays fixed */
+        overflow: hidden; /* Prevent scrolling */
+        height: 100vh; /* Ensure the body covers the full height of the screen */
+        filter: opacity(9);
+        scrollbar-width: none;
+        scrollbar-width: none;
+
+      }
+      
+      .send {
+        background-color: #144d37;
+      }
+  
+      .res {
+        background-color: #363636;
+      }
+
+      .hd , 
+      .in{
+        background-color: #2c2c2c;
+      }
+      .cont{
+        background-color: #3e3e3eee;
+        padding: 10px;
+        letter-spacing: 10px;
+        border-radius: 8px;
+        scrollbar-width: none;
+
+      }
+
+      .vid{
+        margin-left: 10px;
+      }
+
+      .btns{
+        font-size: 20px;
+      }
+
+     
+
+      .ic{
+        margin-right:-6px ;
+      }
+    </style>
+  </head>
+  <body class="text-white font-sans">
+    <div class="flex flex-col h-screen">
+      <!-- Header -->
+      <div class="flex items-center justify-between p-4 hd">
+        <div class="flex items-center space-x-4">
+           <a href="index.html" class="ic"><i class="fa-solid fa-arrow-left"></i> </a>  
+          <img alt="Profile picture" class="rounded-full w-10 h-10" height="40" src="https://github.com/sara112023/whatsapp-story/blob/main/bg2.jpg?raw=true" width="40"/>
+          <div>
+            <div class="font-bold">Mental❣️</div>
+            <div class="text-sm text-gray-400">Online</div>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4 btns">
+            <div class="cont">
+                <i class="fas fa-video text-white vid"></i>
+          <i class="fas fa-phone text-white"></i>
+            </div>
+            <i class="fa-solid fa-magnifying-glass text-white"></i>
+          
+        </div>
+      </div>
+  
+      <!-- Chat Area -->
+      <div class="flex-1 overflow-y-auto p-4 space-y-4" id="chatArea">
+        <!-- Initial message will be added here -->
+      </div>
+  
+      <!-- Input Area -->
+      <div class="flex items-center in p-4">
+        <i class="fas fa-smile text-gray-400 text-2xl"></i>
+        <input class="flex-1 bg-gray-700 text-white p-2 mx-4 rounded-lg" id="messageInput" placeholder="Message" type="text" value="mm mm aprm"/>
+        <i class="fas fa-paperclip text-gray-400 text-2xl"></i>
+        <i class="fa-solid fa-indian-rupee-sign text-gray-400 text-2xl mx-4"></i>
+        <i class="fa-solid fa-paper-plane text-green-500 text-2xl" onclick="checkMessage()"></i>
+      </div>
+    </div>
+  </body>
+</html>

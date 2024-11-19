@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <head>
+  <title>
+   WhatsApp Clone
+  </title>
+
+
+  <style>
+
+    in{
+        margin-top: 30px;
+    }
+  </style>
+
+ </head>
+ <body class="bg-gray-900 text-white font-sans">
+  <div class="p-4">
+   <div class="flex justify-between items-center mb-8">
+    <h1 class="text-3xl font-bold">
+     WhatsApp 
+    </h1>
+    <div class="flex items-center space-x-4">
+     <i class="fas fa-qrcode">
+     </i>
+     <i class="fas fa-camera">
+     </i>
+     <i class="fas fa-ellipsis-v">
+     </i>
+    </div>
+   </div>
+   <div class="relative mb-3 in">
+    <input class="w-full bg-gray-800 text-gray-400 rounded-full py-3 pl-10 pr-6" placeholder="Ask Meta AI or Search" type="text"/>
+    <i class="fas fa-search absolute left-3 top-3.5 text-gray-400">
+    </i>
+   </div>
+   <div class="flex justify-between items-center mb-4">
+   
+   </div>
+   <div class="space-y-4">
+    <a href="main.html">
+    <div class="flex justify-between items-center">
+     <div class="flex items-center space-x-4">
+      <img alt="Profile picture of Nethra" class="rounded-full" height="50" src="https://github.com/sara112023/whatsapp-story/blob/main/bg2.jpg?raw=true" width="50"/>
+      <div>
+       <div class="font-bold">
+        Mental❣️
+       </div>
+       <div class="text-gray-400 text-sm">
+        Hi chello
+       </div>
+      </div>
+     </div>
+     <div class="text-right">
+      <div class="text-sm" id="live-time">
+      </div>
+      <i class="fas fa-thumbtack">
+      </i>
+     </div>
+    </div>
+</a>
+
+   
+    <div class="flex justify-between items-center">
+     <div class="flex items-center space-x-4">
+      <img alt="Profile picture of Sanjay" class="rounded-full" height="50" src="npfp.png" width="50"/>
+      <div>
+       <div class="font-bold">
+       Nethra (You)
+       </div>
+       <div class="text-gray-400 text-sm">
+       iam nethra
+       </div>
+      </div>
+     </div>
+     <div class="text-right">
+      <div class="text-sm">
+       Yesterday
+      </div>
+     </div>
+    </div>
+  
+   
+ 
+   
+   </div>
+  </div>
+  <div class="fixed bottom-0 left-0 right-0 bg-gray-800 p-4 flex justify-around items-center">
+   <div class="flex flex-col items-center">
+    <i class="fas fa-comment-alt text-green-500">
+    </i>
+    <span class="text-xs text-green-500">
+     Chats
+    </span>
+   </div>
+   <div class="flex flex-col items-center">
+    <i class="fas fa-circle-notch text-gray-400">
+    </i>
+    <span class="text-xs text-gray-400">
+     Updates
+    </span>
+   </div>
+   <div class="flex flex-col items-center">
+    <i class="fas fa-users text-gray-400">
+    </i>
+    <span class="text-xs text-gray-400">
+     Communities
+    </span>
+   </div>
+   <div class="flex flex-col items-center">
+    <i class="fas fa-phone-alt text-gray-400">
+    </i>
+    <span class="text-xs text-gray-400">
+     Calls
+    </span>
+   </div>
+  </div>
+
+  
+  <script src="https://cdn.tailwindcss.com">
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<script>
+ function updateTime() {
+          const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hour12: true };
+          const formatter = new Intl.DateTimeFormat([], options);
+          const timeString = formatter.format(new Date());
+          document.getElementById('live-time').innerText = timeString;
+      }
+
+      setInterval(updateTime, 1000);
+</script>
+
+ </body>
+</html>
